@@ -3,10 +3,10 @@ with
 source as (
     
     SELECT 
-        "AssociatedCompanyIds" as Key_Company,
+        "CompanyId" as Key_Company,
         * 
-    from {{ source('CLIMBERNL_INTERNAL', 'Hubspot_Deals' ) }}
-)
+    from {{ source('CLIMBERNL_INTERNAL', 'Hubspot_Companies' ) }}   
+) 
 
 staged as (
     

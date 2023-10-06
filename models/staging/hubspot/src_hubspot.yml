@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: CLIMBERNL_INTERNAL1
+    database: CLIMBERNL_DEV
+    tables:
+      - name: Hubspot_Companies
+      - name: Hubspot_Deals
