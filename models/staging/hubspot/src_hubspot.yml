@@ -4,14 +4,6 @@ sources:
   - name: CLIMBERNL_INTERNAL
     database: CLIMBERNL_DEV
     tables:
-      - name: Hubspot_Companies
-      - name: Hubspot_Deals
-        loaded_at_field: _etl_loaded_at
-        freshness: 
-          warn_after:
-            count: 1
-            period: day
-          error_after:
-            count: 2
-            period: day
+      - name: HUBSPOT_COMPANIES
+      - name: HUBSPOT_DEALS
         

@@ -1,17 +1,18 @@
 with 
 
 source as (
-    
-    SELECT 
+
+    select 
         "CompanyId" as Key_Company,
         * 
-    from {{ source('CLIMBERNL_INTERNAL', 'Hubspot_Companies' ) }}   
-) 
+    from {{ source('CLIMBERNL_INTERNAL', 'HUBSPOT_COMPANIES') }}
 
-staged as (
-    
+),
+
+renamed as (
+
     select * from source
 
 )
 
-select * from staged
+select * from renamed

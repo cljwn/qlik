@@ -7,4 +7,15 @@ models:
         tests:
           - unique
           - not_null
-              
+  - name: stg_deals
+    columns:
+      - name: KEY_COMPANY
+        tests:
+          - unique
+          - not_null
+      - name: "Is Closed Won"
+        tests:
+          - accepted_values:
+              values:
+                - "TRUE"
+                - "FALSE"
