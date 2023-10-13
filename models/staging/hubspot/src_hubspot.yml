@@ -5,5 +5,10 @@ sources:
     database: CLIMBERNL_DEV
     tables:
       - name: HUBSPOT_COMPANIES
+        columns:
+          - name: CompanyId
+            tests: 
+              - unique
+              - not_null
       - name: HUBSPOT_DEALS
-        
+                  

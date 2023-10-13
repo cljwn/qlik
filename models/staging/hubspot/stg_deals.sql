@@ -2,17 +2,17 @@ with
 
 source as (
 
-    select 
-        "AssociatedCompanyIds" as Key_Company,
-        * 
+    select
+        SPLIT_PART("AssociatedCompanyIds" , ',' , 1)  as Key_Company,
+        *
     from {{ source('CLIMBERNL_INTERNAL', 'HUBSPOT_DEALS') }}
 
 ),
 
-renamed as (
+final as (
 
     select * from source
 
 )
 
-select * from renamed
+select * from final --where "AssociatedCompanyIds" LIKE '%721725%' 

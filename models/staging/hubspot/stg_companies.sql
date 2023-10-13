@@ -4,15 +4,15 @@ source as (
 
     select 
         "CompanyId" as Key_Company,
-        * 
+        *
     from {{ source('CLIMBERNL_INTERNAL', 'HUBSPOT_COMPANIES') }}
 
 ),
 
-renamed as (
+final as (
 
     select * from source
 
 )
 
-select * from renamed
+select * from final --where Key_Company LIKE '%721725%' 
