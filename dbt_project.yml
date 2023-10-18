@@ -37,8 +37,3 @@ models:
       +materialized: table
     staging:
       +materialized: view
-
-quoting:
-  database: false
-  schema: false
-  identifier: false
