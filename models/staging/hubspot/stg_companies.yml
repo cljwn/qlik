@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: stg_companies
+    description: This is the company table that contains all companies within Hubspot 
+    columns:
+      - name: CompanyId
+        description: This is the field that is unique for a company
+        quote: true
+        tests:
+          - unique
+          - not_null
+  - name: stg_deals
+    columns:
+      - name: Deal probability
+        description: '{{ doc("deal_probability") }}'
+        quote: true
+        tests:
+          - accepted_values:
+              values:
+                - 0
+                - 0.1
+                - 0.2
+                - 0.3
+                - 0.4
+                - 0.5
+                - 0.6
+                - 0.7
+                - 0.8
+                - 0.9
+                - 1
