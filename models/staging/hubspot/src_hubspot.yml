@@ -2,13 +2,18 @@ version: 2
 
 sources:
   - name: CLIMBERNL_INTERNAL
+    description: A clone of the hubspot data
     database: CLIMBERNL_DEV
     tables:
       - name: HUBSPOT_COMPANIES
+        description: The raw companies data
         columns:
           - name: CompanyId
+            description: This is the primary key
+            quote: true
             tests: 
               - unique
               - not_null
       - name: HUBSPOT_DEALS
+        description: The raw order data
                   
